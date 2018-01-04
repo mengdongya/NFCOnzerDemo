@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    android:padding="15dp"
+    tools:context="personal.zach.nfc.com.ozner.nfc.NFCWRActivity">
+
+    <TextView
+        android:text="@string/work_flow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TableLayout
+        android:layout_margin="2dp"
+        android:background="@color/black"
+        android:stretchColumns="1,3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </TableLayout>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="2dp"
+        android:background="@color/black"
+        android:stretchColumns="1,3">
+
+        <TableRow android:layout_width="match_parent">
+
+            <TextView
+                android:layout_margin="0.5dp"
+                android:background="@color/yello"
+                android:text="卡类型："
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:id="@+id/tv_cardType"
+                android:layout_margin="0.5dp"
+                android:background="@color/yello"
+                android:text=""
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:layout_margin="0.5dp"
+                android:background="@color/yello"
+                android:text="区域代码："
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:id="@+id/tv_areaId"
+                android:layout_margin="0.5dp"
+                android:background="@color/yello"
+                android:text=""
+                android:textColor="@color/black"/>
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_margin="0.5dp"
+                android:background="@color/yello"
+                android:text="卡号："
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:id="@+id/tv_cardNumber"
+                android:layout_margin="0.5dp"
+                android:background="@color/yello"
+                android:text=""
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:layout_margin="0.5dp"
+                android:background="@color/yello"
+                android:text="机型："
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:id="@+id/tv_deviceType"
+                android:layout_margin="0.5dp"
+                android:background="@color/yello"
+                android:text=""
+                android:textColor="@color/black"/>
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_margin="0.5dp"
+                android:background="@color/yello"
+                android:text="卡面值："
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:id="@+id/tv_cardFace"
+                android:layout_margin="0.5dp"
+                android:background="@color/yello"
+                android:text=""
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:layout_margin="0.5dp"
+                android:background="@color/yello"
+                android:text="包月值："
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:id="@+id/tv_cardValue"
+                android:layout_margin="0.5dp"
+                android:background="@color/yello"
+                android:text=""
+                android:textColor="@color/black"/>
+        </TableRow>
+        <TableRow>
+
+            <TextView
+                android:layout_margin="0.5dp"
+                android:background="@color/yello"
+                android:text="二级代码:"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:id="@+id/tv_secAreaCode"
+                android:layout_margin="0.5dp"
+                android:background="@color/yello"
+                android:text=""
+                android:textColor="@color/black"/>
+        </TableRow>
+    </TableLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:text="选择操作方式"
+        android:textColor="#000000"/>
+
+    <com.ozner.nfc.UIZMutilRadioGroup
+        android:id="@+id/rg_chekOper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <RadioButton
+                android:id="@+id/rb_read"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:checked="true"
+                android:text="读卡"
+                android:textColor="@color/colorAccent"/>
+
+            <RadioButton
+                android:id="@+id/rb_both"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="写包月卡"/>
+
+            <RadioButton
+                android:id="@+id/rb_writeClear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="写清除卡"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <RadioButton
+                android:id="@+id/rb_writeTest"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="写测试卡"/>
+
+            <RadioButton
+                android:id="@+id/rb_writePassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="写密码卡"/>
+
+            <RadioButton
+                android:id="@+id/rb_areaCode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="写区域代码卡"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rb_changeAreaCode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="写区域代码修改卡"/>
+
+            <RadioButton
+                android:id="@+id/rb_deviceNum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="写机号卡"/>
+
+            <RadioButton
+                android:id="@+id/rb_deviceType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="写机型卡"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <RadioButton
+                android:id="@+id/rb_personl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="写个人卡"/>
+            <RadioButton
+                android:id="@+id/rb_monthType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="写包月机型卡"/>
+            <RadioButton
+                android:id="@+id/rb_whiteType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="写为白卡"/>
+        </LinearLayout>
+    </com.ozner.nfc.UIZMutilRadioGroup>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_writeTip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="写入数据"
+            android:textColor="#000000"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/et_deviceType"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:hint="机型"
+                android:inputType="number"
+                android:maxLength="16"
+                android:text="32"/>
+
+            <EditText
+                android:id="@+id/et_areaCode"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="区域代码"
+                android:inputType="number"
+                android:maxLength="16"
+                android:text="9995"/>
+            <EditText
+                android:id="@+id/et_sec_areaCode"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="二级区域代码"
+                android:inputType="number"
+                android:maxLength="16"
+                android:text="0001"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/et_cardFace"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:hint="包月卡面值"
+                android:inputType="number"
+                android:maxLength="16"/>
+
+            <EditText
+                android:id="@+id/et_cardValue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="包月值"
+                android:inputType="number"
+                android:maxLength="16"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:hint="个人卡水面值"
+                android:id="@+id/et_cardFacePer"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:inputType="number"
+                android:layout_height="wrap_content"/>
+            <EditText
+                android:hint="个人卡充水值"
+                android:id="@+id/et_cardValuePer"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:inputType="number"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/et_deviceNum"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="机号"
+            android:inputType="number"
+            android:maxLength="16"/>
+    </LinearLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tv_result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""/>
+    </ScrollView>
+
+</LinearLayout>

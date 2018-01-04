@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">OznerNFCWR</string>
+    <string name="work_flow">刷卡流程：\n：1、密码卡；2：测试卡；3：机号卡；4、机型卡；5、区域代码卡；6、包月卡/个人卡.\n
+    个人卡(桶）：</string>
+</resources>
